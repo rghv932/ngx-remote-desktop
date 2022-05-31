@@ -1,0 +1,35 @@
+<div class="vdi-container">
+  <ngx-remote-desktop [showFileManager]="fileManagerVisible">
+    <!-- Toolbar items -->
+    <ngx-remote-desktop-toolbar-item
+      *ngIf="remoteDesktopService.isConnected()"
+      (click)="toggleFileManager()"
+      align="left"
+    >
+      File Manager
+    </ngx-remote-desktop-toolbar-item>
+    <ngx-remote-desktop-toolbar-item
+      *ngIf="remoteDesktopService.isConnected()"
+      (click)="handleDisconnect()"
+      align="right"
+    >
+      Disconnect
+    </ngx-remote-desktop-toolbar-item>
+
+    <!-- Override connection state messages -->
+    <ngx-remote-desktop-connecting-message>
+      <div
+        class="ngx-remote-desktop-message-title ngx-remote-desktop-message-title-success"
+      >
+        CONNECTING TO REMOTE DESKTOP
+      </div>
+      <div class="ngx-remote-desktop-message-body">
+        Attempting to connect to the remote desktop. Waiting for response...
+      </div>
+    </ngx-remote-desktop-connecting-message>
+
+    <!-- File Manager -->
+    <ngx-remote-desktop-file-manager *ngIf="remoteDesktopService.isConnected()">
+    </ngx-remote-desktop-file-manager>
+  </ngx-remote-desktop>
+</div>

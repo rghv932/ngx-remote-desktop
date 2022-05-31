@@ -1,0 +1,12 @@
+{
+  "/tunnel": {
+    "target": "http://localhost:8080",
+    "changeOrigin":true,
+    "ws":false
+  },
+  "/websocket-tunnel": {
+    "target": "http://localhost:4567",
+    "changeOrigin":true,
+    "ws":true
+  }
+}
