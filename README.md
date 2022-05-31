@@ -1,4 +1,4 @@
-# ngx-remote-desktop 
+# ngx-remote-desktop
 
 `ngx-remote-desktop` is an Angular component for connecting to a remote desktop using the [guacamole remote desktop gateway](https://guacamole.apache.org/)
 
@@ -8,11 +8,10 @@ The work on this repo is highly experimental, and I have no prior experience on 
 We are using @ILLGrenoble/guacamole-common-js TypeScript definitions but we don't know how much outdated they are, mayba a TypeScript definition package will be available.
 
 ## Develop
- - `npm i`
- - Build the remote-desktop project with `ng build remote-desktop --watch`
- - Build the project with `ng serve --open`
- - You need a guacd + backend to test this project. I suggest [this one](https://github.com/wwt/guac).
- - You may need to use a proxy-config in Angular, in case your browser complains about CORS.
+
+- `npm i`
+- Build the project with `ng serve --open`
+- You may need to use a proxy-config in Angular, in case your browser complains about CORS.
 
 Caveats:
 
@@ -43,4 +42,5 @@ Caveats:
 - Write docs one day
 
 # Thanks
+
 A big thank you to ILLGrenoble who wrote this project in the first stance and to the Guacamole project.
